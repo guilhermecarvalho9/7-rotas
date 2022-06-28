@@ -6,19 +6,23 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 // import { CursosComponent } from './cursos/cursos.component';
+// import { AlunosComponent } from './alunos/alunos.component';
 import { CursosModule } from "./cursos/cursos.module";
+import { AlunosModule } from './alunos/alunos.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
+    // AlunosComponent,
     // CursosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CursosModule
+    CursosModule,
+    AlunosModule
   ],
   providers: [],
   bootstrap: [AppComponent]
