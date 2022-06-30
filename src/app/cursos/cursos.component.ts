@@ -34,6 +34,11 @@ export class CursosComponent implements OnInit {
     this.router.navigate(['/cursos'], {queryParams: {'pagina': ++this.pagina}})
   }
 
+  voltaPagina() {
+    // this.pagina++;
+    this.router.navigate(['/cursos'], {queryParams: {'pagina': --this.pagina}})
+  }
+
   ngOnDestroy(): void {
     this.inscricao.unsubscribe();
   }

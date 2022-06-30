@@ -1,12 +1,13 @@
-<p>
+<h5>
   Lista de Cursos
-</p>
+</h5>
 <div class="mb-2">
   <p>Página: {{ pagina }}</p>
   <button class="btn btn-primary" (click)="proximaPagina()">Próxima página</button>
+  <button class="btn btn-primary" (click)="voltaPagina()">Página anterior</button>
 </div>
 <div class="list-group">
-    <a [routerLink]="['/curso', curso.id]" *ngFor="let curso of cursos" class="list-group-item list-group-item-action active" aria-current="true">
+    <a [routerLink]="['/curso', curso.id]" routerLinkActive="active" *ngFor="let curso of cursos" class="list-group-item list-group-item-action " aria-current="true">
       {{ curso.nome }}
     </a>
   </div>
