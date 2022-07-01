@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {MatIconModule} from '@angular/material/icon';
+import { MatSliderModule } from '@angular/material/slider';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +11,8 @@ import { LoginComponent } from './login/login.component';
 // import { AlunosComponent } from './alunos/alunos.component';
 import { CursosModule } from "./cursos/cursos.module";
 import { AlunosModule } from './alunos/alunos.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,9 +24,13 @@ import { AlunosModule } from './alunos/alunos.module';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     CursosModule,
-    AlunosModule
+    AlunosModule,
+    BrowserAnimationsModule,
+    MatIconModule,
+    MatSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]
