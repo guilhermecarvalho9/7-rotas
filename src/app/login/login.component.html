@@ -1,9 +1,17 @@
 <h5>Login</h5>
 
 <div class="row">
-    <div class="col-sm-12 mb-3">
-        <label for="usuario" class="form-label">Usuário</label>
-        <input type="email" class="form-control" id="usuario">
-    </div>
+    <mat-form-field class="example-full-width col-sm-12 mb-3" appearance="fill">
+        <mat-label>Usuário</mat-label>
+        <input [(ngModel)]="usuario.nome" matInput placeholder="Usuário">
+      </mat-form-field>
+      <mat-form-field class="example-full-width col-sm-12 mb-3" appearance="fill">
+        <mat-label>Senha</mat-label>
+        <input [(ngModel)]="usuario.senha" type="password" matInput placeholder="Senha">
+      </mat-form-field>
 </div>
+<button mat-raised-button color="primary" (click)="fazerLogin()">Primary<mat-icon>arrow_forward_ios</mat-icon></button>
+
+
+
 

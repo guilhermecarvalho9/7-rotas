@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {MatIconModule} from '@angular/material/icon';
 import { MatSliderModule } from '@angular/material/slider';
+import {MatButtonModule} from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +15,7 @@ import { CursosModule } from "./cursos/cursos.module";
 import { AlunosModule } from './alunos/alunos.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { AuthService } from './login/auth.service';
 
 @NgModule({
   declarations: [
@@ -30,9 +33,11 @@ import { FormsModule } from '@angular/forms';
     AlunosModule,
     BrowserAnimationsModule,
     MatIconModule,
-    MatSliderModule
+    MatSliderModule,
+    MatButtonModule,
+    MatInputModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
