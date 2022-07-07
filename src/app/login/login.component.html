@@ -1,16 +1,19 @@
-<h5>Login</h5>
-
-<div class="row">
-    <mat-form-field class="example-full-width col-sm-12 mb-3" appearance="fill">
-        <mat-label>Usuário</mat-label>
-        <input [(ngModel)]="usuario.nome" matInput placeholder="Usuário">
-      </mat-form-field>
+<div class="my-4">
+  <mat-card-title>Login</mat-card-title>
+<mat-card-content>
+  <div class="row">
       <mat-form-field class="example-full-width col-sm-12 mb-3" appearance="fill">
-        <mat-label>Senha</mat-label>
-        <input [(ngModel)]="usuario.senha" type="password" matInput placeholder="Senha">
-      </mat-form-field>
+          <mat-label>Usuário</mat-label>
+          <input [(ngModel)]="usuario.nome" matInput placeholder="Usuário">
+        </mat-form-field>
+        <mat-form-field class="example-full-width col-sm-12 mb-3" appearance="fill">
+          <mat-label>Senha</mat-label>
+          <input [(ngModel)]="usuario.senha" type="password" matInput placeholder="Senha">
+        </mat-form-field>
+  </div>
+</mat-card-content>
+<mat-card-actions><button mat-raised-button color="primary" (click)="fazerLogin()">Login<mat-icon>arrow_forward_ios</mat-icon></button></mat-card-actions>
 </div>
-<button mat-raised-button color="primary" (click)="fazerLogin()">Primary<mat-icon>arrow_forward_ios</mat-icon></button>
 
 
 

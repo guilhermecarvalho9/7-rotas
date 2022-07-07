@@ -8,6 +8,8 @@ import { AlunoFormComponent } from './aluno-form/aluno-form.component';
 import { AlunoDetalheComponent } from './aluno-detalhe/aluno-detalhe.component';
 import { AlunosRoutingModule } from './alunos.routing.module';
 import { AlunosService } from './alunos.service';
+import { AuthGuard } from '../guards/auth.guard';
+import { MatCardModule } from '@angular/material/card';
 
 
 
@@ -21,10 +23,11 @@ import { AlunosService } from './alunos.service';
     CommonModule,
     FormsModule,
     RouterModule,
-    AlunosRoutingModule
+    AlunosRoutingModule,
+    MatCardModule
   ],
   providers: [
-    AlunosService
+    AlunosService,
   ]
 })
 export class AlunosModule {

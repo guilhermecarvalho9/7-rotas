@@ -4,6 +4,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatButtonModule} from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
+import {MatCardModule} from '@angular/material/card';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,9 @@ import { AlunosModule } from './alunos/alunos.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from './login/auth.service';
+import { AuthGuard } from './guards/auth.guard';
+import { CursosGuard } from './guards/cursos.guard';
+import { AlunosGuard } from './guards/alunos.guard';
 
 @NgModule({
   declarations: [
@@ -35,9 +39,15 @@ import { AuthService } from './login/auth.service';
     MatIconModule,
     MatSliderModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
+    MatCardModule
   ],
-  providers: [AuthService],
+  providers: [
+    AuthService, 
+    AuthGuard, 
+    CursosGuard,
+    AlunosGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
